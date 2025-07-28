@@ -17,3 +17,14 @@ function agregarAmigo(){
 function limpiarCaja(){
     document.getElementById("amigo").value = "";
 }
+
+function actualizarLista(){
+    let lista = document.getElementById("listaAmigos");
+    lista.innerHTML = "";
+
+    for(let i = 0; i < amigosLista.length; i++){
+        let li = document.createElement("li");
+        li.textContent = amigosLista[i];
+        lista.appendChild(li);
+    }
+}
